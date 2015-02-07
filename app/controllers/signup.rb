@@ -2,8 +2,6 @@ get '/signup' do
   erb :signup
 end
 
-
-
 post '/signup' do
   name = params[:name]
   email = params[:email]
