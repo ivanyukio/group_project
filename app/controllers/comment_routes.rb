@@ -7,7 +7,3 @@ put '/items/:id/comments/:id/?' do
   Comment.update_attributes(params)
   redirect back
 end
-
-get '/' do
-  erb :welcome
-end
