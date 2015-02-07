@@ -22,4 +22,8 @@ Comment.create(content: "This beargarg bedbugs", user_id: 3, item_id: 1)
 Comment.create(content: "This argargbedbugs", user_id: 3, item_id: 1)
 Comment.create(content: "This bedarghas bedbugs", user_id: 3, item_id: 1)
 Comment.create(content: "This argarga has bedbugs", user_id: 3, item_id: 1)
+<<<<<<< HEAD
 Comment.create(content: "This bed has argargaga", user_id: 3, item_id: 1)
+=======
+Comment.create(content: "This bed has argargaga", user_id: 3, item_id: 1)
+>>>>>>> fix merge conflict
