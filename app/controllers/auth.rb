@@ -1,11 +1,11 @@
-# get '/' do
-#   erb :welcome
-# end
+get '/' do
+  erb :welcome
+end
 
-# get '/login' do
+get '/login' do
+  
+end
 
-# end
-
-# get '/signup' do
-
-# end
+get '/signup' do
+  
+end
