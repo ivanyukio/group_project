@@ -1,0 +1,7 @@
+<ul>
+  <% @item.comments.each do |comment| %>
+    <%= erb :_comment, locals: {comment: comment} %>
+  <% end %>
+</ul>
+
+<%= erb :_comment_form %>

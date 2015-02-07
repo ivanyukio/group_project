@@ -1,0 +1,10 @@
+<div class="form_toggle">
+  <button class="edit"> Edit Comment </button>
+  <form class="edit_form" action="/items/:id/comments/:id/" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <input type="submit" value="Update">
+   <textarea rows="4" cols="50" name="content" form="edit_form">
+</textarea>
+  </form>
+
+</div>

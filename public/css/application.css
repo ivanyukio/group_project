@@ -65,3 +65,11 @@ code {
     margin-left: -1em;
     overflow: auto;
 }
+
+.edit_form {
+    display: none;
+}
+
+.add_form {
+    display:none;
+}

@@ -15,3 +15,11 @@ Item.create(name: :MacBook, description: "Very power", price: "99999", user_id: 
 Item.create(name: :Room, description: "Very roomy", price: "A million dollars", user_id: 4, category_id: 4)
 
 Comment.create(content: "This bed has bedbugs", user_id: 3, item_id: 1)
+Comment.create(content: "aeufhau ", user_id: 3, item_id: 1)
+Comment.create(content: "arrgara", user_id: 3, item_id: 1)
+Comment.create(content: "Thiargargugs", user_id: 3, item_id: 1)
+Comment.create(content: "This beargarg bedbugs", user_id: 3, item_id: 1)
+Comment.create(content: "This argargbedbugs", user_id: 3, item_id: 1)
+Comment.create(content: "This bedarghas bedbugs", user_id: 3, item_id: 1)
+Comment.create(content: "This argarga has bedbugs", user_id: 3, item_id: 1)
+Comment.create(content: "This bed has argargaga", user_id: 3, item_id: 1)

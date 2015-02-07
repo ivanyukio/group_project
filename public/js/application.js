@@ -1,7 +1,19 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $('.edit').on("click", function(){
+    $('.edit_form').hide();
+    $(this).parent().find('.edit_form').show();
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('.add').on("click", function(){
+    $('.add_form').hide();
+    $(this).parent().find('.add_form').show();
+  });
+
+  // $('.edit_form').submit(function(event){
+  //   event.preventDefault()
+  // })
+
+// 1. What am I sending to the server?
+// 2. What am I doing with that information and what am I sending back?
+// 3. Now that I got a response, what am I doing to the view
 });
