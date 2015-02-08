@@ -1,5 +1,5 @@
 <ul>
-  <% @item.comments.each do |comment| %>
+  <% @item_to_display.comments.each do |comment| %>
     <%= erb :_comment, locals: {comment: comment} %>
   <% end %>
 </ul>

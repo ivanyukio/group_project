@@ -1,8 +1,10 @@
 get '/' do
+  p session
   if current_user
-    erb :categories
+    @categories = Category.all
+    redirect "/categories"
   else
-    erb :login
+    redirect "/login"
   end
 end
 
@@ -10,15 +12,16 @@ get '/login' do
   erb :login
 end
 
+post "/" do
+  session[:user] = nil
+  redirect "/login"
+end
 
-post '/login' do
-  user = User.authenticate(params[:email],params[:password])
-  if user
-    session[:user] = user
-    redirect '/categories'
+post "/login" do
+  session[:user] = User.authenticate(params[:email], params[:password])
+  if session[:user] != nil
+    redirect "/categories"
   else
-    redirect '/login'
+    redirect "/login"
   end
-
-
 end
