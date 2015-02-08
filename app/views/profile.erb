@@ -6,7 +6,7 @@
   <% @user.items.each do |item| %>
   <li> <a href="../categories/<%= item.category_id%>/items/<%=item.id%>"><%= p item.name %></a> </li>
   <% end %>
-  <a href="/edit/<%=@user.id%>"> Edit your profile </a>
+  <a href="/profiles/<%=@user.id%>/edit"> Edit your profile </a>
   </ul>
 
   <a href="/profiles/<%= @user.id%>/new_item">Add an item!</a>
