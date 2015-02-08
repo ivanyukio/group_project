@@ -1,5 +1,5 @@
 <div id="category">
   <% @items.each do |item| %>
-        <li><a href="#"><%= item.name %></a></li>
+        <li><a href="/categories/<%=item.category_id%>/items/<%=item.id%>"><%= item.name %></a></li>
   <% end %>
 </div>
