@@ -1,11 +1,18 @@
 <h2><%= @item_to_display.name %></h2>
+<div class="item_image"><img src="<%= @item_to_display.photo_url %>"></div><br>
 Description: <%= @item_to_display.description %><br>
 Price: <%= @item_to_display.price %><br>
 <% if @item_to_display.photo_url != "" || @item_to_display.photo_url != nil %>
-  Photo: <img src="<%= @item_to_display.photo_url %>">
-  <% puts @item_to_display.photo_url %>
 <% end %>
 
-<% if session[:user].items.include?(Item.find(params[:id]))%>
-  <a href="/categories/<%= params[:category_id] %>/items/<%= params[:id] %>/update">Edit</a>
+<% if current_user.id == @item_to_display.user_id %>
+  <a href="/categories/<%= params[:category_id] %>/items/<%= params[:id] %>/update">Edit</a><br>
+  <form method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="Delete">
+  </form>
 <% end %>
+
+<%= erb :_comments %>
+
+<a href="/categories/<%= params[:category_id] %>">Go back</a>

@@ -6,6 +6,8 @@ get '/profiles/:id/edit' do
 end
 
 
+
+# One edit for each item
 post '/edit_name' do
   session[:user].update_attributes(name: params[:name])
   @user = session[:user]
