@@ -1,9 +1,9 @@
 <div class="form_toggle">
   <button class="add"> Add Comment </button>
 
-  <form class="add_form" action="/items/1/comments/1" method="POST">
+  <form action="/categories/<%= params[:category_id] %>/items/<%= @item_to_display.id %>/comments" method="POST">
     <label> Comment: </label>
-   <textarea rows="4" cols="50" name="content" form="add_form">
+   <textarea rows="4" cols="50" name="content">
    </textarea>
    <input type="submit" value="Make comment">
   </form>

@@ -1,5 +1,5 @@
 <li> <%= comment.user.name%>: <%=comment.content%>
   <% if comment.user.id == current_user.id %>
-    <%= erb :_comment_form_edit %>
+    <%= erb :_comment_form_edit, locals: {comment: comment} %>
   <% end %>
 </li>
