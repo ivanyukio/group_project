@@ -1,18 +1,17 @@
 <h1>Create a new item:</h1>
 
-<h3>Dropdown menu here to select item category</h3>
-
-
 <form method="POST" action="/profiles/<%= session[:user].id%>/new_item">
-  Item name: <input type="text" name="name"><br>
-  Category: <select name = "cat_id">
-              <option value="1">Furniture</option>
-              <option value="2">Pets</option>
-              <option value="3">Gadgets</option>
-              <option value="4">Housing</option>
-            </select>
-  Description: <textarea name="description"></textarea><br>
-  Price: <input type="text" name="price"><br>
-  Photo url: <input type="text" name="photo_url"><br>
-  <input type="submit" value="Create">
-</form>
+  =======
+  <form method="POST">
+    Select category:
+    <select name="category_id">
+      <% @categories.each do |cat| %>
+      <option value=<%= cat.id %>><%= cat.name %></option>
+      <% end %>
+    </select><br>
+    Item name: <input type="text" name="name"><br>
+    Description: <textarea name="description"></textarea><br>
+    Price: <input type="text" name="price"><br>
+    Photo url: <input type="text" name="photo_url"><br>
+    <input type="submit" value="Create">
+  </form>

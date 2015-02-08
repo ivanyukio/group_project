@@ -73,3 +73,7 @@ code {
 .add_form {
     display:none;
 }
+
+.item_image img {
+    max-width: 50%;
+}

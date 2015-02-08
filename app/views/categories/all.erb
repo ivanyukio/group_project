@@ -1,5 +1,14 @@
+<h6><%= session[:user].name %> | <a href="/profiles/<%= session[:user].id %>">My profile</a></h6>
+
+
 <div id="categories">
   <% @categories.each do |category| %>
     <li><a href="/categories/<%= category.id %>"><%= category.name %></a></li>
   <% end %>
 </div>
+
+<a href="/items/new">Create new item</a>
+
+<form method="POST">
+<input type="submit" value="Log Out">
+</form>

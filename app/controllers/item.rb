@@ -1,17 +1,18 @@
 get "/categories/:category_id/items/:id" do
   @item_to_display = Item.find(params[:id])
-
   erb :"items/show_item"
+  # erb :_comments
 end
 
-get "/profiles/:id/new_item" do
+get "/items/new" do
+  @categories = Category.all
   erb :"items/new_item"
 end
 
-post "/profiles/:id/new_item" do
-  user = User.find(session[:user].id)
-  user.items.create(name: params[:name], description: params[:description], price: params[:price], photo_url: params[:photo_url], category_id: params[:cat_id].to_i)
-  redirect "/profiles/#{user.id}"
+post "/items/new" do
+  p params
+  Item.create(name: params[:name], description: params[:description], price: params[:price], photo_url: params[:photo_url], category_id: params[:category_id], user_id: session[:user].id)
+  redirect "/categories/#{params[:category_id]}"
 end
 
 get "/categories/:category_id/items/:id/update" do
@@ -24,6 +25,12 @@ get "/categories/:category_id/items/:id/update" do
 end
 
 put "/categories/:category_id/items/:id/update" do
-  Item.update(params[:id], {:name => params[:name], :description => params[:description], price: params[:price]})
+
+  Item.update(params[:id], {:name => params[:name], :description => params[:description], price: params[:price], :photo_url => params[:photo_url]})
   redirect "/categories/#{params[:category_id]}/items/#{params[:id]}"
+end
+
+delete "/categories/:category_id/items/:id" do
+  Item.destroy(params[:id])
+  redirect "/categories/#{params[:category_id]}"
 end
