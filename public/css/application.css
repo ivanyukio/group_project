@@ -63,7 +63,7 @@ code {
     font-size: 40%;
     line-height: 1.4em;
     margin-left: -1em;
-    overflow: auto;
+/*    overflow: auto;
 }
 
 .edit_form {
@@ -72,4 +72,4 @@ code {
 
 .add_form {
     display:none;
-}
+}*/

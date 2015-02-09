@@ -1,3 +1,5 @@
+<a href="/logout"> Logout </a>
+
 <% if session[:user].id == @user.id%>
   <h1> Your profile </h1>
   <img src="<%=@user.photo_url%>" class="profile_picture" style="width:20%; border-radius: 150px;">
@@ -6,8 +8,10 @@
   <% @user.items.each do |item| %>
   <li> <a href="../categories/<%= item.category_id%>/items/<%=item.id%>"><%= p item.name %></a> </li>
   <% end %>
-  <a href="/edit/<%=@user.id%>"> Edit your profile </a>
+  <a href="/profiles/<%=@user.id%>/edit"> Edit your profile </a>
   </ul>
+
+  <a href="/profiles/<%= @user.id%>/new_item">Add an item!</a>
 
 
 

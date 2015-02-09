@@ -1,0 +1,90 @@
+/*h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  height:100px;
+  text-align: center;
+  background-image:url("http://textures8.com/wp-content/uploads/2014/08/Brick-Wall-Background-103-625x423.jpg");
+  background-size: cover;
+}*/
+
+html {
+  background-color: grey;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  margin-top: 0;
+  right:0;
+}
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
+  font-size:3em;
+}
+
+.login_background {
+  background-image:url("http://static.hdw.eweb4.com/media/wallpapers_1920x1200/photography/1/1/brick-wall-photography-hd-wallpaper-1920x1200-7826.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height : 240px;
+
+}
+/*#signup {
+  position: auto;
+}*/
+
+.login input[type="submit"] {
+  margin-left: 30px;
+  margin: auto;
+}
+
+.pure-form fieldset {
+  margin-left:200px;
+  margin-right: 200px;
+  margin-top: 40px;
+
+}
+
+.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected {
+background-color:grey;
+color: #fff;
+}
+
+
+.background_signup, .background {
+  background-image: url("http://media.giphy.com/media/y3tnPDOFJSG5y/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:43em;
+  margin-top: -30px;
+
+}
+.background_signup .pure-form, .background_signup .pure-form-stacked {
+  margin-top:-10px;
+  margin-left: 420px;
+  padding: 200px 20px;
+  margin-right: 420px;
+  border-radius: 10px;
+  color:grey;
+}
+
+.background .pure-form, .background .pure-form-stacked {
+  margin-top:-20px;
+  margin-left: 200px;
+  padding: 50px 20px;
+  padding-top: 0;
+  margin-right: 220px;
+  border-radius: 10px;
+  color:grey;
+}
+
+/*#signup {
+  background-image: url("http://images.nationalgeographic.com/wpf/media-live/photos/000/881/overrides/horse-arabian-mare-egypt_88170_990x742.jpg");
+  background-size: cover;
+  text-align: center;
+  background-repeat: no-repeat;
+  padding: 300px;
+  background-attachment: fixed;
+  background-position: center center;
+}*/

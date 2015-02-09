@@ -1,11 +1,18 @@
 get '/categories' do
   @categories = Category.all
+  if current_user
+    erb :'categories/all'
+  else
+    erb :login
+  end
 
-  erb :'categories/all'
 end
 
 get '/categories/:id' do
   @items = Item.where(category_id: params[:id])
-
-  erb :'categories/show'
+  if current_user
+    erb :'categories/show'
+  else
+    erb :login
+  end
 end

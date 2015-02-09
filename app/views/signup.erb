@@ -1,12 +1,19 @@
-<form action="/signup" method="post">
-  Name
-  <input type="text" name="name">
-  Email
-  <input type="text" name="email">
-  Password
-  <input type="password" name="password">
-  Password, again
-  <input type="password" name="password_confirmation">
-  <input type="submit" value="signup">
-  <%= @message %>
+<div class="background_signup">
+
+<form action="/signup" method="post" class="pure-form pure-form-stacked">
+  <!-- <label for="name">Name </label> -->
+  <br>
+  <input id="email"type="text" name="name" placeholder="Name">
+  <!-- <label for="email">Email </label> -->
+  <br>
+  <input id="email" type="text" name="email" placeholder="Email">
+  <!-- <label for="password">Password </label> --><br>
+  <input id="password" type="password" name="password" placeholder="Password">
+  <!-- <label for="password" id="password">Confirm Password </label> --><br>
+  <input type="password" name="password_confirmation" placeholder="Confirm">
+  <%= @message %><br>
+  <input type="submit" value="signup" class="pure-button pure-button-primary">
+
 </form>
+
+</div>
