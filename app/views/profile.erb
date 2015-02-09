@@ -1,3 +1,5 @@
+<a href="/logout"> Logout </a>
+
 <% if session[:user].id == @user.id%>
   <h1> Your profile </h1>
   <img src="<%=@user.photo_url%>" class="profile_picture" style="width:20%; border-radius: 150px;">
