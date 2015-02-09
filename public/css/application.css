@@ -77,3 +77,26 @@ code {
 .item_image img {
     max-width: 50%;
 }
+
+body {
+    width: 70%;
+    margin:auto;
+}
+
+.navbar li, form {
+    display: inline;
+}
+
+.navbar_item a {
+    text-decoration: none;
+}
+
+input[type=submit] {padding:0px; background:#FFF; border:0 none;
+cursor:pointer;
+}
+
+#web_title {
+    font-size: 1.4em;
+    margin-right: 6em;
+    margin-left: -7em;
+}

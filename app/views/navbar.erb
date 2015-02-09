@@ -1,0 +1,10 @@
+<ul class="navbar">
+
+  <li id="web_title"><a href="/categories">DBC Marketplace</a></li>
+<li class="navbar_item"><%= session[:user].name %></li>
+<li class="navbar_item"><a href="/profiles/<%= session[:user].id %>">My profile</a></li>
+<li class="navbar_item"><a href="/profiles">All users</a></li>
+<li class="navbar_item"><form method="POST">
+<input  class="navbar_item" type="submit" value="Log Out">
+</form></li>
+</ul>
