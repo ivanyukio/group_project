@@ -8,8 +8,12 @@
 }*/
 
 html {
-  background-color: grey;
+  background-image: url('http://adashouse.com/wp-content/uploads/2014/12/top-brick-wall-design-in-brick-texture-google-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: 'Montserrat', sans-serif;
+  color:white;
+
 }
 
 .logo {
@@ -79,12 +83,26 @@ color: #fff;
   color:grey;
 }
 
-/*#signup {
-  background-image: url("http://images.nationalgeographic.com/wpf/media-live/photos/000/881/overrides/horse-arabian-mare-egypt_88170_990x742.jpg");
-  background-size: cover;
-  text-align: center;
-  background-repeat: no-repeat;
-  padding: 300px;
-  background-attachment: fixed;
-  background-position: center center;
-}*/
+.navbar {
+  margin-top: 40px;
+  margin-bottom: 70px;
+
+}
+.navbar a.nav_element {
+  text-decoration: none !important;
+  color:black;
+  right:0;
+  margin-left: 200px;
+  background-color:white;
+  padding:5px 5px;
+  border-radius: 5px;
+}
+
+
+li.nav_element,
+.category li a.nav_element {
+  font-size: 3em;
+  text-decoration: none !important;
+  color:white;
+}
+

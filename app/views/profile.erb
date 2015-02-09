@@ -1,28 +1,32 @@
-<a href="/logout"> Logout </a>
-
+<div class="navbar">
+<a href="/categories" class="nav_element"> Categories </a>
+<a href="/profiles" class="nav_element"> Profiles </a>
+<a href="/logout" class="nav_element"> Logout </a>
+</div>
+</div>
 <% if session[:user].id == @user.id%>
   <h1> Your profile </h1>
   <img src="<%=@user.photo_url%>" class="profile_picture" style="width:20%; border-radius: 150px;">
-  <p> Here's a list of your items : </p>
+  <p style="font-size:2em"> Here's a list of your items : </p>
+
   <ul>
   <% @user.items.each do |item| %>
-  <li> <a href="../categories/<%= item.category_id%>/items/<%=item.id%>"><%= p item.name %></a> </li>
-  <% end %>
-  <a href="/profiles/<%=@user.id%>/edit"> Edit your profile </a>
+    <li> <a href="../categories/<%= item.category_id%>/items/<%=item.id%>" class="nav_element" style="font-size:1.5em; color:white; text-decoration:none !important; background-color:black; padding:10px 10px; border-radius:10px;"><%= p item.name %></a> </li>
+  <% end %><br><br>
+
   </ul>
-
-  <a href="/profiles/<%= @user.id%>/new_item">Add an item!</a>
-
+  <a href="/profiles/<%= @user.id%>/new_item" style="font-size:1.5em; text-decoration:none; background-color:white; padding:10px 10px; border-radius:10px; margin-left:10%">Add an item!</a> <br><br><br>
+  <a href="/profiles/<%=@user.id%>/edit" style="font-size:1.5em; text-decoration:none; background-color:white; padding:10px 10px; border-radius:10px;margin-left:40%"> Edit your profile </a>
 
 
 <% else %>
 
   <h1> Welcome to <%= @user.name %>'s page </h1>
-  <img src="<%=@user.photo_url%>" class="profile_picture" style="width:20%; border-radius: 150px;">
-  <p> Here's a list of <%= @user.name %>'s items : </p>
+  <img src="<%=@user.photo_url%>" class="profile_picture" style="width:20%; margin-left:40%; border-radius: 150px;">
+  <p style="font-size:2em; text-align:center"> Here's a list of <%= @user.name %>'s items : </p>
   <ul>
   <% @user.items.each do |item| %>
-  <li> <a href="../categories/<%=item.category_id%>/items/<%=item.id%>"><%= p item.name %></a> </li>
+  <li> <a href="../categories/<%=item.category_id%>/items/<%=item.id%>" class="nav_element" style="font-size:1.5em; color:white; text-decoration:none !important; background-color:black; padding:10px 10px; border-radius:10px;"><%= p item.name %></a> </li><br><br>
   <% end %>
   </ul>
 <%end %>

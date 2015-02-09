@@ -1,5 +1,11 @@
-<div id="category">
+<div class="navbar">
+<a href="/categories" class="nav_element"> Categories </a>
+<a href="/profiles" class="nav_element"> Profiles </a>
+<a href="/profiles/<%=session[:user].id%>" class="nav_element"> Your profile </a><br><br>
+<a href="/logout" class="nav_element"> Logout </a>
+</div>
+<div class="category">
   <% @items.each do |item| %>
-        <li><a href="/categories/<%=item.category_id%>/items/<%=item.id%>"><%= item.name %></a></li>
+        <li><a class="nav_element" href="/categories/<%=item.category_id%>/items/<%=item.id%>"><%= item.name %></a></li>
   <% end %>
 </div>

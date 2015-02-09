@@ -1,6 +1,6 @@
 get '/categories' do
-  @categories = Category.all
   if current_user
+    @categories = Category.all
     erb :'categories/all'
   else
     erb :login

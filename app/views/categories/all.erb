@@ -1,5 +1,12 @@
+<div class="navbar">
+<a href="/profiles" class="nav_element"> Profiles </a>
+<a href="/profiles/<%=session[:user].id%>" class="nav_element"> Your profile </a>
+<a href="/logout" class="nav_element"> Logout </a>
+</div>
 <div id="categories">
+<ul>
   <% @categories.each do |category| %>
-    <li><a href="/categories/<%= category.id %>"><%= category.name %></a></li>
+    <li><a href="/categories/<%= category.id %>" class="nav_element" style="font-size:2em; color:white; text-decoration:none !important; background-color:black; padding:10px 10px; border-radius:10px;"><%= category.name %></a></li><br><br>
   <% end %>
+</ul>
 </div>

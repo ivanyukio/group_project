@@ -1,10 +1,19 @@
-<a href="/logout"> Logout </a>
+<div class="navbar">
+<a href="/categories" class="nav_element"> Categories </a>
+<a href="/profiles" class="nav_element"> Profiles </a>
+<a href="/profiles/<%=session[:user].id%>" class="nav_element"> Your profile </a><br><br>
+<a href="/logout" class="nav_element"> Logout </a>
+</div>
+<div style="background-color:white;color:black; padding:-50px -50px; width:70%; margin-left:13%;border-radius:10px; padding:20px 20px">
+<div style="text-align:center;">
 <h2><%= @item_to_display.name %></h2>
-<div class="item_image"><img src="<%= @item_to_display.photo_url %>"></div><br>
+<div class="item_image"><img src="<%= @item_to_display.photo_url %>">
+</div><br>
 Description: <%= @item_to_display.description %><br>
 Price: <%= @item_to_display.price %><br>
 <% if @item_to_display.photo_url != "" || @item_to_display.photo_url != nil %>
 <% end %>
+</div>
 
 <% if current_user.id == @item_to_display.user_id %>
   <a href="/categories/<%= params[:category_id] %>/items/<%= params[:id] %>/update">Edit</a><br>
@@ -13,7 +22,10 @@ Price: <%= @item_to_display.price %><br>
     <input type="submit" value="Delete">
   </form>
 <% end %>
-
+<br><br><br>
+Comments :
 <%= erb :_comments %>
 
 <a href="/categories/<%= params[:category_id] %>">Go back</a>
+
+</div>

@@ -1,16 +1,24 @@
-<a href="/logout"> Logout </a>
-<h1>Create a new item:</h1>
+<div class="navbar">
+<a href="/categories" class="nav_element"> Categories </a>
+<a href="/profiles" class="nav_element"> Profiles </a>
+<a href="/profiles/<%=session[:user].id%>" class="nav_element"> Your profile </a><br><br>
+<a href="/logout" class="nav_element"> Logout </a>
+</div>
 
+<h1>Create a new item:</h1>
+<div style="background-color:white;color:black; padding:10px 10px; width:70%; margin-left:13%;border-radius:10px">
   <form method="POST">
     Select category:
     <select name="cat_id">
       <% Category.all.each do |cat| %>
       <option value=<%= cat.id %>><%= cat.name %></option>
       <% end %>
-    </select><br>
-    Item name: <input type="text" name="name"><br>
-    Description: <textarea name="description"></textarea><br>
+    </select><br><br>
+    Item name: <input type="text" name="name"><br><br>
+    Description: <textarea name="description"></textarea><br><br>
     Price: <input type="text" name="price"><br>
-    Photo url: <input type="text" name="photo_url"><br>
+    Photo url: <input type="text" name="photo_url"><br><br>
     <input type="submit" value="Create">
   </form>
+
+</div>

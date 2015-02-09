@@ -1,5 +1,5 @@
 User.create(name: :Ivan,email: "ivan@gmail.com", password: "123", password_confirmation: "123", photo_url: "http://upload.wikimedia.org/wikipedia/commons/7/7b/Donkey_1_arp_750px.jpg")
-User.create(name: :Rayan,email: "rayan@gmail.com", password: "123", password_confirmation: "123")
+User.create(name: :Rayan,email: "rayan@gmail.com", password: "123", password_confirmation: "123", photo_url: "http://images.nationalgeographic.com/wpf/media-live/photos/000/005/cache/grey-wolf_565_600x450.jpg")
 User.create(name: :James,email: "james@gmail.com", password: "123", password_confirmation: "123")
 User.create(name: :Lucas,email: "lucas@gmail.com", password: "123", password_confirmation: "123")
 

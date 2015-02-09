@@ -1,6 +1,7 @@
 get '/' do
   if current_user
-    erb :categories
+    @categories = Category.all
+    erb :'categories/all'
   else
     erb :login
   end

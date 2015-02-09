@@ -1,29 +1,35 @@
-<a href="/logout"> Logout </a>
+<div class="navbar">
+<a href="/categories" class="nav_element"> Categories </a>
+<a href="/profiles" class="nav_element"> Profiles </a>
+<a href="/logout" class="nav_element"> Logout </a>
+</div>
+
 <h1> Edit your profile settings ! </h1>
+<div style="background-color:white;color:black; padding:-50px -50px; width:70%; margin-left:13%;border-radius:10px">
+<div style="text-align:center;">
 <ul>
-  Your name is <%= @user.name %>
+  Your name is <%= @user.name %><br><br>
 <li> want to edit your name ? </li>
 <form action="/edit_name" method="post">
-  <input type="text" name="name">
+  <input type="text" name="name" placeholder="Name">
   <input type="submit" value="change">
 </form>
 <br>
 Your email is <%= @user.email %>
 <li> want to edit your email ? </li>
 <form action="/edit_email" method="post">
-  <input type="text" name="email">
+  <input type="text" name="email" placeholder="Email">
   <input type="submit" value="change">
 </form><%= @message_email %>
 <br>
 <li> want to edit your password ? </li>
 <form action="/edit_password" method="post">
-  <input type="password" name="password">
-  <input type="password" name="password_confirmation">
-  confirm
+  <input type="password" name="password" placeholder="Password">
+  <input type="password" name="password_confirmation" placeholder="Confirm">
   <input type="submit" value="change">
 </form><%= @message_password %>
 </ul>
-
+</div>
 
 
 <a href="../../profiles/<%= @user.id %>"> Go back to your profile </a>
